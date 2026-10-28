@@ -1,2 +1,10 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<%= image_tag(@post.image.url(:large)) %>
+<br>
+<%= @post.description %>
+
+<% if current_user && current_user == @post.user %>
+  <div class="link">
+    <%= link_to "Destroy", @post, method: :delete, data: { confirm: "Are you sure?" } %>
+    <%= link_to "Edit", edit_post_path(@post) %>
+  </div>
+<% end %>

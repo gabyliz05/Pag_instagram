@@ -4,8 +4,10 @@
     <br>
     <%= x.description %>
     <div class="link">
-      <%= link_to "Destroy", x, method: :delete, data: { confirm: "Are you sure?" } %>
-      <%= link_to "Edit", edit_post_path(x) %>
+      <% if current_user && current_user == x.user %>
+        <%= link_to "Destroy", x, method: :delete, data: { confirm: "Are you sure?" } %>
+        <%= link_to "Edit", edit_post_path(x) %>
+      <% end %>
       <%= link_to "Show", x %>
     </div>
   </div>
