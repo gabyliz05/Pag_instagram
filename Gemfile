@@ -61,3 +61,5 @@ gem "devise", "~> 5.0"
 gem "bootstrap-sass", "~> 3.4"
 
 gem "kt-paperclip", "~> 8.0"
+
+gem "json", "< 3.0"

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2026_10_28_192519) do
+ActiveRecord::Schema[7.2].define(version: 2026_10_28_194719) do
   create_table "posts", force: :cascade do |t|
     t.text "description"
     t.datetime "created_at", null: false
